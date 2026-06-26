@@ -34,3 +34,12 @@ models:
     # Config indicated by + and applies to all files under models/example/
     bronze:
       +materialized: table # This configures all models in the bronze directory to be built as tables 
+      +schema: bronze # This configures all models in the bronze directory to be built in the bronze schema
+
+    silver:
+      +materialized: table
+      +schema: silver
+    
+    gold:
+      +materialized: table
+      +schema: gold
