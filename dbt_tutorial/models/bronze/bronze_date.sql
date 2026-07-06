@@ -1,4 +1,4 @@
-{{ config(materialized='view') }}
+{{ config(materialized='view') }} {# Block level configuration for this model #}
 
 SELECT 
     *
