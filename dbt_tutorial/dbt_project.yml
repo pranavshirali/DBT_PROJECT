@@ -12,7 +12,7 @@ profile: 'dbt_tutorial'
 # These configurations specify where dbt should look for different types of files.
 # The `model-paths` config, for example, states that models in this project can be
 # found in the "models/" directory. You probably won't need to change these!
-model-paths: ["models"]
+model-paths: ["models/silver", "models/gold"]
 analysis-paths: ["analyses"]
 test-paths: ["tests"]
 seed-paths: ["seeds"]
@@ -27,16 +27,11 @@ clean-targets:         # directories to be removed by `dbt clean`
 # Configuring models
 # Full documentation: https://docs.getdbt.com/docs/configuring-models
 
-# In this example config, we tell dbt to build all models in the example/
-# directory as views. These settings can be overridden in the individual model
+# These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
 models:
   dbt_tutorial:
-    # Config indicated by + and applies to all files under models/example/
-    bronze:
-      +materialized: table # This configures all models in the bronze directory to be built as tables 
-      +schema: bronze # This configures all models in the bronze directory to be built in the bronze schema
-
+    # Config indicated by + and applies to all models in the silver and gold directories
     silver:
       +materialized: table
       +schema: silver
