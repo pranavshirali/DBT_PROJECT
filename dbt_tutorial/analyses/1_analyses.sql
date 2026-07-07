@@ -2,5 +2,3 @@
 {# This folder and all the files inside is just for analyses #}
 
 SELECT * FROM {{ ref('lookup') }}
-
-
