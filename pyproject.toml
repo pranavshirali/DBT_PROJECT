@@ -8,3 +8,8 @@ dependencies = [
     "dbt-core>=1.11.11",
     "dbt-databricks>=1.12.1",
 ]
+
+[dependency-groups]
+dev = [
+    "shandy-sqlfmt[jinjafmt]>=0.30.0",
+]
