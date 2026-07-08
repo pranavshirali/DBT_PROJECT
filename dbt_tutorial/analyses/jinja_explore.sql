@@ -1,8 +1,6 @@
 {%- set apples = ["gala", "red delicious", "fuji", "McIntosh", "honeycrisp"] -%}
 {%- for apple in apples -%}
-    {%- if apple != "McIntosh" -%}
-        {{ apple }}
-    {%- else -%}
-        I hate {{ apple }}
+    {%- if apple != "McIntosh" -%} {{ apple }}
+    {%- else -%} i hate {{ apple }}
     {%- endif %}
 {% endfor %}
