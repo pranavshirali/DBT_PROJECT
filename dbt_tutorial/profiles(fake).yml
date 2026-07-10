@@ -3,16 +3,16 @@ dbt_tutorial:
   outputs:
     dev:                                      # Development profile (dev)
       type: databricks
-      catalog: { your dbt catalog name }      # e.g., hive_metastore or a Unity Catalog name
-      schema: { your dbt catalog schema }     # e.g., default
+      catalog: { Databricks catalog name }      # e.g., hive_metastore or a Unity Catalog name
+      schema: { Databricks schema }     # e.g., default
       host: { Databricks workspace URL }      # e.g., adb-123456789.1.azuredatabricks.net
       http_path: { Databricks HTTP path }     # e.g., /sql/1.0/endpoints/xxxxxxxx
       token: { Databricks access token }      # Usually starts with dapi...
       threads: { number of threads }          # e.g., 4
     prod:                                     # Production profile (prod)
       type: databricks
-      catalog: { your dbt catalog name }      # e.g., hive_metastore or a Unity Catalog name
-      schema: { your dbt catalog schema }     # e.g., default
+      catalog: { Databricks catalog name }      # e.g., hive_metastore or a Unity Catalog name
+      schema: { Databricks schema }     # e.g., default
       host: { Databricks workspace URL }      # e.g., adb-123456789.1.azuredatabricks.net
       http_path: { Databricks HTTP path }     # e.g., /sql/1.0/endpoints/xxxxxxxx
       token: { Databricks access token }      # Usually starts with dapi...
